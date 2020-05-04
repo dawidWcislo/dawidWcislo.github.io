@@ -3,12 +3,151 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Dawid Wcislo</title>
+    <title>Dawid Wcisło</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <script src='js/main.js'></script>
+    <link rel="stylesheet"  href="css/fontello.css" />
+    <script src="js/scrollreveal-master/dist/scrollreveal.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
+<script>
+	jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+			
+			$('#lista1').click(function() { $.scrollTo($('#omnie'), 1000); });
+			$('#lista2').click(function() { $.scrollTo($('#containerfact'), 1000); });
+			$('#lista3').click(function() { $.scrollTo($('#abilities'), 1000); });
+			$('#lista4').click(function() { $.scrollTo($('#inter'), 1000); });
+	
+			$('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
+            
+            $(window).scroll(function()
+		{
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		}
+		);
+	
+		}
+		);
+</script>
+    <style>
+        .icon{
+            font-size: 5vw;
+            margin-right: 2vh;
+        }
+        @media only screen and (max-width:450px){
+            .icon{
+                font-size: 10vw;
+                margin-bottom: 1vw;
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2> hello there</h2>
+    <!-- Animation background -->
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+    <main>
+        <div class="scrollup"><a id="arrow" href="#"><span class="icon icon-up"></span></a></div>
+
+    <section id="aboutMe">
+        <div id="content"><p>
+           <p><b>Cześć,</b> Nazywam się Dawid Wcisło, mam 21 lat i Od początku 2020 roku systematycznie uczę się tworzenia 
+        stron internetowych oraz rzeczy związanych z hostingiem. Każdego dnia uczę się czegoś nowego, lubię poznawać nowe technologie i  sposoby, które pomagają w tworzeniu
+        stron. W wolnych chwilach lubię grać na gitarzę, gotować oraz grać w gry. Obecnie odbywam kurs na front-end developera, który ukończę 5 maja. </p>
+        </p>
+            <div id="contact"> 
+                <ul class="navigation">
+                    <li class="navigationLi"><a id="lista2" href="#containerfact">Dodatkowe Informacje</a></li>
+                    <li class="navigationLi"><a id="lista3" href="#abilities">Umiejętności</a></li>
+                    <li class="navigationLi"><a id="lista4" href="#inter">Kontakt</a></li>
+                  </ul>
+                <div id="cv"><a class="civik" href=cv/CurriculumVitae.pdf target="_blank"> Zobacz moje CV </a></div>
+            </div>
+        </div>
+         <img class="me" src="img/Dawid.jpg" alt="Zdjęcie">
+    </section>
+    <header class="headerFacts"><h2 class="napis"> Jeszcze kilka factów o mnie </h2></header>
+    <section id="containerfact">
+        <section class="column">
+            <article class="fact" id="fact1"><h3>Zangażowanie</h3><p>Zawsze staram się wykonać jak najlepiej powierzone mi zadania. Nie interesują mnie półśrodki. </p></article>
+            <article class="fact" id="fact2"><h3>Odpowiedzialność</h3><p>Jestem odpowiedzialny za swoje czyny. Jak każdy człowiek popełniam błędy ale potrafię z nich wyciągnąć wnioski.</p></article>
+        </section>
+        <section class="column">
+            <article class="fact" id="fact3"><h3>Samodoskonalenie</h3><p>Nie interesuje mnie kiedy ktoś za mnie naprawi problem. Muszę wiedzieć co poszło nie tak, dlaczego i jak to naprawić. Innymi słowy chcę się nauczyć łowić, a nie dostać rybe czy nawet 100 ryb. </p> </article>
+            <article class="fact" id="fact4"><h3>Motywacja</h3>Tak naprawdę to jej nie potrzebuję, ponieważ uwielbiam uczyć się o tworzeniu stron internetowych i na pewno tym chce się zajmować w przyszłości.</article>
+        </section>
+        <section class="column">
+            <article class="fact" id="fact5"><h3>Punktualność</h3>Zawsze byłem zdania, że jeżeli mam się spóźnić chociaż 5 minut to wolę być pół godziny wcześniej. </article>
+            <article class="fact" id="fact6"><h3> I najważniejsze...</h3> Kocham pizzę, więc znam dużo ofert pizzerii internetowych. :) </article>
+        </section>
+    </section>
+    <header id="projectsHeader"><h2>Projekty</h2></header>
+         <section id="projects">
+            
+           <article class="projectColumn">
+               <div class="project"><div class="demo">Demo</div>
+               <div class="code">Code</div></div>
+           </article>
+           <article class="projectColumn">
+            <div class="project"><div class="demo">Demo</div>
+            <div class="code">Code</div></div>
+        </article>
+         </section>
+   <header id="abilitiesHeader"> <h2>Moje&nbsp;Umiejętności</h2></header>
+    <!-- <section id="abilities">
+        <article class="left wp"><img src="img/w-logo-blue.svg" alt="wordpress"><p>Wordpress był pierwszym cms'em, którego poznałem podczas swojej przygody tworzenia stron. Obecnie znam kody błędów i umiem sobie z nimi poradzić. Potrafię stworzyć multisite dla niego, zmienić adres domeny za pomocą replace, Wiem gdzie w plikach znajdują się miejsca na wtyczki oraz motywy. A i oczywiście umiem dodawać, modyfikować strony, wpisy i tym podobne.  </p></article>
+        <article class="right"><p>Drugim cms'em, którego poznałem podczas swojej wciąż trwającej przygody był Joomla, będę szczery nie polubiliśmy się ale mimo wszystko prześwietliłem go i dzięki temu znam podstawy obsługi tym cms'em  </p><img src="img/joomla.svg" alt="joomla"></article>
+        <article class="left"><img src="img/linux.svg" alt="Linux"><p>Linux towarzyszy mi prawie od początku mojej nauki, najpierw były to tylko zwykłe komendy w Putty, potem jednak zmieniłem swój system operacyjny na Linuxa Mint dzięki czemu poznaje codziennie nowe możliwości. </p></article>
+        <article class="right"><p>Mam również teoretyczne pojęcie z zakresu hostingu oraz domen. Wiem jak one działają, znam również typy certifikatów SSL i wiem w jaki sposób zabezpieczają one stronę.   </p><img src="img/ssll.png" alt=""></article>
+        <article class="left protocols"><img src="img/filezille.png" alt="Filezilla"><p>Znam protokoły HTTP, DNS, SMTP, POP3, IMAP, FTP, SSH i wiem do czego służą, korzystam codziennie z większości tych protokołów korzystając z internetu, tak samo jak większość użytkowników nawet o tym nie wiedząc. Ale dodatkowo jestem zaznajomiony z Filezillą oraz Putty.</p></article>
+        <article class="right"><p>HTML poznałem kiedy zacząłem myśleć na poważnie o frontendzie. Obecnie znam najnowsze znaczniki semantyczne i żadny kod napisany w HTML nie jest mi straszny.</p><img src="img/html.png" alt="html"></article>
+        <article class="left"><img src="img/css.svg" alt="CSS"><p>Równomiernie z nauką HTML uczyłem się również CSS'a, znam ich składnie umiem ustawiać witryny za pomocą flexa oraz grida oraz modyfikować kod, który napotkam.</p></article>
+        <article class="right"><p>Po poznaniu języków opisowych do satysfakcjonującego mnie poziomu, zacząłem  uczyć się Javascriptu, póki co znam jedynie podstawy jednak nie poddaję się i staram się codziennie pracować z tym językiem.</p><img src="img/js.svg" alt="Javascirpt"></article>
+        <article class="left"><span class="icon icon-users"></span><p>Pracowałem w różnych miejscach z różnymi ludźmi, jednak zawsze pomagałem jak tylko mogłem, ponieważ byliśmy drużyną, nigdy nie tworzyłem toksycznej atmosfery bo sam jej nie lubię.</p></article>
+        <article class="right"><p>Podczas swojej kariery spotykałem różnych klientów, ale zawsze zachowywałem się profesjonalnie i nie dawałem się ponieść emocjom.</p><span class="icon icon-handshake-o"></span></article>
+    </section> -->
+</main>
+    <footer id="inter">
+        <h4>Dane Kontaktowe</h4>
+        <div class="container"> <p class="telefon"> Numer Telefonu: 690-474-733 </p> <p class="email"><a href="mailto: dawid.wcislo98@gmail.com"> Email: dawid.wcislo98@gmail.com</a></p></div>
+        <p class="copy">&copy; 2020 Dawid Wcisło</p>
+    </footer>
+    
+        
+    
+    <script>
+
+        window.sr = ScrollReveal()
+        sr.reveal('.left', {
+            reset: false,
+            delay: 500,
+            distance: 0
+        })
+        sr.reveal('.right', {
+            reset: false,
+            delay: 500,
+            distance: 0
+        })
+
+        </script>
 </body>
 </html>
