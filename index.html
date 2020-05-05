@@ -19,8 +19,9 @@
 			$.scrollTo(0);
 			
 			$('#lista2').click(function() { $.scrollTo($('#containerfact'), 1000); });
-			$('#lista3').click(function() { $.scrollTo($('#abilities'), 1000); });
-			$('#lista4').click(function() { $.scrollTo($('#inter'), 1000); });
+			$('#lista3').click(function() { $.scrollTo($('#abilitiesContainer'), 1000); });
+			$('#lista4').click(function() { $.scrollTo($('#projects'), 1000); });
+			$('#lista5').click(function() { $.scrollTo($('#inter'), 1000); });
 	
 			$('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
             
@@ -76,8 +77,9 @@
             <div id="contact"> 
                 <ul class="navigation">
                     <li class="navigationLi"><a id="lista2" href="#containerfact">Dodatkowe Informacje</a></li>
+                    <li class="navigationLi"><a id="lista4" href="#projects">Projekty</a></li>
                     <li class="navigationLi"><a id="lista3" href="#abilities">Umiejętności</a></li>
-                    <li class="navigationLi"><a id="lista4" href="#inter">Kontakt</a></li>
+                    <li class="navigationLi"><a id="lista5" href="#inter">Kontakt</a></li>
                   </ul>
                 <div id="cv"><a class="civik" href=cv/CurriculumVitae.pdf target="_blank"> Zobacz moje CV </a></div>
             </div>
@@ -104,32 +106,34 @@
             
            <article class="projectColumn">
                <div class="project"><div class="demo"> <a href="#"> Demo</a></div>
-               <div class="code"><a href="#">Code</a></div></div>
+               <div class="code"><a href="#">Code</a></div>
+            </div>
            </article>
            <article class="projectColumn">
             <div  class="project"><div class="demo"><a href="#"> Demo</a></div>
-            <div class="code"><a href="#">Code</a></div></div>
+            <div class="code"><a href="#">Code</a></div>
+        </div>
         </article>
          </section>
    <header id="abilitiesHeader"> <h2>Moje&nbsp;Umiejętności</h2></header>
    <div id="abilitiesContainer">
-    <img class="popup1_open images" src="img/w-logo-blue.svg" alt="">
-    <img class="popup2_open images" src="img/joomla.svg" alt="">
-    <img class="popup3_open images" src="img/html.png" alt="">
-    <img class="popup4_open images" src="img/css.png" alt="">
-    <img class="popup5_open images" src="img/js.svg" alt="">
-    <img class="popup6_open images" src="img/filezille.png" alt="">
-    <img class="popup7_open images" src="img/linux.png" alt="">
-    <img class="popup8_open images" src="img/ssll.png" alt="">
+        <img class="popup1_open images" src="img/w-logo-blue.svg" alt="">
+        <img class="popup2_open images" src="img/joomla.svg" alt="">
+        <img class="popup3_open images" src="img/html.png" alt="">
+        <img class="popup4_open images" src="img/css.png" alt="">
+        <img class="popup5_open images" src="img/js.svg" alt="">
+        <img class="popup6_open images" src="img/filezille.png" alt="">
+        <img class="popup7_open images" src="img/linux.png" alt="">
+        <img class="popup8_open images" src="img/ssll.png" alt="">
 </div>
-<div id="popup1"><img src="img/w-logo-blue.svg" alt=""> <p>Wordpress był pierwszym cms'em, którego poznałem podczas swojej przygody tworzenia stron. Obecnie znam kody błędów i umiem sobie z nimi poradzić. Potrafię stworzyć multisite dla niego, zmienić adres domeny za pomocą replace, Wiem gdzie w plikach znajdują się miejsca na wtyczki oraz motywy. A i oczywiście umiem dodawać, modyfikować strony, wpisy i tym podobne. </p></div>
-<div id="popup2"><img src="img/joomla.svg" alt=""><p>Drugim cms'em, którego poznałem podczas swojej wciąż trwającej przygody był Joomla, będę szczery nie polubiliśmy się ale mimo wszystko prześwietliłem go i dzięki temu znam podstawy obsługi tym cms'em </p></div>
-<div id="popup3"><img src="img/html.png" alt=""><p>HTML poznałem kiedy zacząłem myśleć na poważnie o frontendzie. Obecnie znam najnowsze znaczniki semantyczne i żadny kod napisany w HTML nie jest mi straszny.</p></div>
-<div id="popup4"><img src="img/css.svg"> <p>Równomiernie z nauką HTML uczyłem się również CSS'a, znam ich składnie umiem ustawiać witryny za pomocą flexa oraz grida oraz modyfikować kod, który napotkam.</p></div>
-<div id="popup5"><img src="img/js.svg"> <p>Po poznaniu języków opisowych do satysfakcjonującego mnie poziomu, zacząłem  uczyć się Javascriptu, póki co znam jedynie podstawy jednak nie poddaję się i staram się codziennie pracować z tym językiem.</p></div>
-<div id="popup6"><img src="img/filezille.png"><p>Znam protokoły HTTP, DNS, SMTP, POP3, IMAP, FTP, SSH i wiem do czego służą, korzystam codziennie z większości tych protokołów korzystając z internetu, tak samo jak większość użytkowników nawet o tym nie wiedząc. Ale dodatkowo jestem zaznajomiony z Filezillą oraz Putty.</p></div>
-<div id="popup7"><img src="img/linux.png"><p>Linux towarzyszy mi prawie od początku mojej nauki, najpierw były to tylko zwykłe komendy w Putty, potem jednak zmieniłem swój system operacyjny na Linuxa Mint dzięki czemu poznaje codziennie nowe możliwości.</p></div>
-<div id="popup8"><img src="img/ssll.png"> <p>Mam również teoretyczne pojęcie z zakresu hostingu oraz domen. Wiem jak one działają, znam również typy certifikatów SSL i wiem w jaki sposób zabezpieczają one stronę.</p></div>
+    <div id="popup1"><div class="containerImage"><img class="popImg" src="img/w-logo-blue.svg" alt=""></div> <p style="font-size:1.2em;">Wordpress był pierwszym cms'em, którego poznałem podczas swojej przygody tworzenia stron. Obecnie znam kody błędów i umiem sobie z nimi poradzić. Potrafię stworzyć multisite dla niego, zmienić adres domeny za pomocą replace, Wiem gdzie w plikach znajdują się miejsca na wtyczki oraz motywy. A i oczywiście umiem dodawać, modyfikować strony, wpisy i tym podobne. </p></div>
+    <div id="popup2"><div class="containerImage"><img class="popImg" src="img/joomla.svg" alt=""></div><p style="font-size:1.2em;">Drugim cms'em, którego poznałem podczas swojej wciąż trwającej przygody był Joomla, będę szczery nie polubiliśmy się ale mimo wszystko prześwietliłem go i dzięki temu znam podstawy obsługi tym cms'em </p></div>
+    <div id="popup3"><div class="containerImage"><img class="popImg" src="img/html.png" alt=""></div><p style="font-size:1.2em;">HTML poznałem kiedy zacząłem myśleć na poważnie o frontendzie. Obecnie znam najnowsze znaczniki semantyczne i żadny kod napisany w HTML nie jest mi straszny.</p></div>
+    <div id="popup4"><div class="containerImage"><img class="popImg" src="img/css.svg"></div> <p style="font-size:1.2em;">Równomiernie z nauką HTML uczyłem się również CSS'a, znam ich składnie umiem ustawiać witryny za pomocą flexa oraz grida oraz modyfikować kod, który napotkam.</p></div>
+    <div id="popup5"><div class="containerImage"><img class="popImg" src="img/js.svg"></div> <p style="font-size:1.2em;">Po poznaniu języków opisowych do satysfakcjonującego mnie poziomu, zacząłem  uczyć się Javascriptu, póki co znam jedynie podstawy jednak nie poddaję się i staram się codziennie pracować z tym językiem.</p></div>
+    <div id="popup6"><div class="containerImage"><img class="popImg" src="img/filezille.png"></div><p style="font-size:1.2em;">Znam protokoły HTTP, DNS, SMTP, POP3, IMAP, FTP, SSH i wiem do czego służą, korzystam codziennie z większości tych protokołów korzystając z internetu, tak samo jak większość użytkowników nawet o tym nie wiedząc. Ale dodatkowo jestem zaznajomiony z Filezillą oraz Putty.</p></div>
+    <div id="popup7"><div class="containerImage"><img class="popImg" src="img/linux.png"></div><p style="font-size:1.2em;">Linux towarzyszy mi prawie od początku mojej nauki, najpierw były to tylko zwykłe komendy w Putty, potem jednak zmieniłem swój system operacyjny na Linuxa Mint dzięki czemu poznaje codziennie nowe możliwości.</p></div>
+    <div id="popup8"><div class="containerImage"><img class="popImg" src="img/ssll.png"></div> <p style="font-size:1.2em;">Mam również teoretyczne pojęcie z zakresu hostingu oraz domen. Wiem jak one działają, znam również typy certifikatów SSL i wiem w jaki sposób zabezpieczają one stronę.</p></div>
 </main>
     <footer id="inter">
         <h4>Dane Kontaktowe</h4>

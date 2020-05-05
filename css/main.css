@@ -180,7 +180,7 @@ img.me{
     #aboutMe{
         flex-direction: column-reverse;
         margin-top: 0;
-        height: 120vh;
+        min-height: 150vh;
     }
     #contact{
         flex-direction: column;
@@ -207,11 +207,16 @@ img.me{
 
 @media only screen and (max-width: 460px){
     #aboutMe{
-        min-height: 130vh;
+        min-height: 150vh;
     }
     #cv{
         height: 20%;
         padding-top: 2%;
+    }
+}
+@media only screen and (max-width: 360px){
+    #aboutMe{
+        min-height: 160vh;
     }
 }
 #cv:hover{
@@ -391,18 +396,18 @@ h3{
 }
 @media only screen and (max-width: 900px){
     #abilitiesHeader{
-        margin-top: 50vh;
+        margin-top: 5vh;
         width: 100%;
     }
 }
 @media only screen and (max-width: 460px){
     #abilitiesHeader{
-        margin-top: 50vh;
+        margin-top: 5vh;
     }
 }
 @media only screen and (max-width: 400px){
     #abilitiesHeader{
-        margin-top: 40vh;
+        margin-top: 5vh;
         font-size: .95em;
     }
 }
@@ -497,6 +502,21 @@ header#projectsHeader{
     width: 100%;
     height: 100%;
     color: white;
+}
+@media only screen and (max-width: 900px){
+    header#projectsHeader{
+        width: 99vw;
+        margin-top: 5vh;
+    }
+    
+}
+@media only screen and (max-width: 650px){
+    #projects{
+        flex-direction: column;
+    }
+    .project{
+        width: 99vw;
+    }
 }
 #abilitiesContainer{
     margin-top: 3vh;
@@ -600,31 +620,7 @@ img{
         width: 99vw;
     }
 }
-@media only screen and (max-height: 630px){
-    #abilitiesHeader{
-        margin-top: 60vh;
-    }
-}
-@media only screen and (max-height: 630px){
-    #abilitiesHeader{
-        margin-top: 75vh;
-    }
-}
-@media only screen and (max-height: 485px){
-    #abilitiesHeader{
-        margin-top: 90vh;
-    }
-}
-@media only screen and (max-height: 540px){
-    #abilitiesHeader{
-        margin-top: 100vh;
-    }
-}
-@media only screen and (max-height: 450px){
-    #abilitiesHeader{
-        margin-top: 105vh;
-    }
-}
+
 @media only screen and (max-width:450px) {
    
     #aboutMe{
@@ -848,4 +844,15 @@ a#arrow{
       align-items: center;
       flex-direction: column;
   }
-  
+  .popImg{
+      max-width: 5%;
+      max-height: 5%;
+  }
+  .containerImage{
+      width: 100%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1%;
+      padding-top: 0;
+  }
