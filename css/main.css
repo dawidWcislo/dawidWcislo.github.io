@@ -8,7 +8,7 @@ body{
     flex-direction: column;
     align-items: center;
     z-index: 1;
-    
+    font-family: 'DM Sans', sans-serif;
 }
 main{
     display: flex;
@@ -235,10 +235,11 @@ h2.napis{
     content:"↓"
 }
 
-.headerFacts{
+header.headerFacts{
     width: 35vw;
     height: 5vh;
-    padding-top: 1vh;
+    padding-top: .5%;
+    padding-bottom: 2%;
     background-color: #0040ff;
     display: flex;
     justify-content: center;
@@ -248,17 +249,18 @@ h2.napis{
     border-radius: 5vh;
 }
 @media only screen and (max-width: 1470px){
-    .headerFacts{
+    header.headerFacts{
         width: 50vw;
     }
 }
 @media only screen and (max-width: 1100px){
-    .headerFacts{
+    header.headerFacts{
         width: 70vw;
+        height: 6vh;
     }
 }
 @media only screen and (max-width: 900px){
-    .headerFacts{
+    header.headerFacts{
         width: 100%;
         height: 6vh;
     }
@@ -267,7 +269,7 @@ h2.napis{
     h2.napis{
         font-size: .95em
     }
-    .headerFacts{
+    header.headerFacts{
         width: 100vw;
     }
 }
@@ -375,10 +377,10 @@ h3{
     font-family: 'Playfair Display', serif;
     text-transform: uppercase;
     font-size: 1.5em;
-    border-radius: 2vh;
+    border-radius: 5vh;
     margin-top: 3vh;
+    padding: .5%;
 }
-
 @media only screen and (min-width: 2500px){
     #abilities{
         width: 65vw;
@@ -827,7 +829,6 @@ a#arrow{
     }
 
 }
-
 .popup_content {
     margin: 10px;
     padding: 2%;
@@ -836,7 +837,8 @@ a#arrow{
     background: white;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    background-color: lightblue;
   }
   #popup1{
       display: flex;
