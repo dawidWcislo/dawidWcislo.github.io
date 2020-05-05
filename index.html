@@ -18,7 +18,6 @@
 			//zresetuj scrolla
 			$.scrollTo(0);
 			
-			$('#lista1').click(function() { $.scrollTo($('#omnie'), 1000); });
 			$('#lista2').click(function() { $.scrollTo($('#containerfact'), 1000); });
 			$('#lista3').click(function() { $.scrollTo($('#abilities'), 1000); });
 			$('#lista4').click(function() { $.scrollTo($('#inter'), 1000); });
@@ -108,19 +107,29 @@
                <div class="code"><a href="#">Code</a></div></div>
            </article>
            <article class="projectColumn">
-            <div class="project"><div class="demo"><a href="#"> Demo</a></div>
+            <div  class="project"><div class="demo"><a href="#"> Demo</a></div>
             <div class="code"><a href="#">Code</a></div></div>
         </article>
          </section>
    <header id="abilitiesHeader"> <h2>Moje&nbsp;Umiejętności</h2></header>
    <div id="abilitiesContainer">
-    <img src="img/w-logo-blue.svg" alt="">
-    <img src="img/html.png" alt="">
-    <img src="img/css.png" alt="">
-    <img src="img/filezille.png" alt="">
-    <img src="img/linux.png" alt="">
+    <img class="popup1_open images" src="img/w-logo-blue.svg" alt="">
+    <img class="popup2_open images" src="img/joomla.svg" alt="">
+    <img class="popup3_open images" src="img/html.png" alt="">
+    <img class="popup4_open images" src="img/css.png" alt="">
+    <img class="popup5_open images" src="img/js.svg" alt="">
+    <img class="popup6_open images" src="img/filezille.png" alt="">
+    <img class="popup7_open images" src="img/linux.png" alt="">
+    <img class="popup8_open images" src="img/ssll.png" alt="">
 </div>
-
+<div id="popup1"><img src="img/w-logo-blue.svg" alt=""> <p>Wordpress był pierwszym cms'em, którego poznałem podczas swojej przygody tworzenia stron. Obecnie znam kody błędów i umiem sobie z nimi poradzić. Potrafię stworzyć multisite dla niego, zmienić adres domeny za pomocą replace, Wiem gdzie w plikach znajdują się miejsca na wtyczki oraz motywy. A i oczywiście umiem dodawać, modyfikować strony, wpisy i tym podobne. </p></div>
+<div id="popup2"><img src="img/joomla.svg" alt=""><p>Drugim cms'em, którego poznałem podczas swojej wciąż trwającej przygody był Joomla, będę szczery nie polubiliśmy się ale mimo wszystko prześwietliłem go i dzięki temu znam podstawy obsługi tym cms'em </p></div>
+<div id="popup3"><img src="img/html.png" alt=""><p>HTML poznałem kiedy zacząłem myśleć na poważnie o frontendzie. Obecnie znam najnowsze znaczniki semantyczne i żadny kod napisany w HTML nie jest mi straszny.</p></div>
+<div id="popup4"><img src="img/css.svg"> <p>Równomiernie z nauką HTML uczyłem się również CSS'a, znam ich składnie umiem ustawiać witryny za pomocą flexa oraz grida oraz modyfikować kod, który napotkam.</p></div>
+<div id="popup5"><img src="img/js.svg"> <p>Po poznaniu języków opisowych do satysfakcjonującego mnie poziomu, zacząłem  uczyć się Javascriptu, póki co znam jedynie podstawy jednak nie poddaję się i staram się codziennie pracować z tym językiem.</p></div>
+<div id="popup6"><img src="img/filezille.png"><p>Znam protokoły HTTP, DNS, SMTP, POP3, IMAP, FTP, SSH i wiem do czego służą, korzystam codziennie z większości tych protokołów korzystając z internetu, tak samo jak większość użytkowników nawet o tym nie wiedząc. Ale dodatkowo jestem zaznajomiony z Filezillą oraz Putty.</p></div>
+<div id="popup7"><img src="img/linux.png"><p>Linux towarzyszy mi prawie od początku mojej nauki, najpierw były to tylko zwykłe komendy w Putty, potem jednak zmieniłem swój system operacyjny na Linuxa Mint dzięki czemu poznaje codziennie nowe możliwości.</p></div>
+<div id="popup8"><img src="img/ssll.png"> <p>Mam również teoretyczne pojęcie z zakresu hostingu oraz domen. Wiem jak one działają, znam również typy certifikatów SSL i wiem w jaki sposób zabezpieczają one stronę.</p></div>
 </main>
     <footer id="inter">
         <h4>Dane Kontaktowe</h4>
@@ -128,9 +137,27 @@
         <p class="copy">&copy; 2020 Dawid Wcisło</p>
     </footer>
     
-        
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
     <script>
+        $(document).ready(function() {
+    
+          // Initialize the plugin
+          $('#JPO').popup();
+    
+          // Set default `pagecontainer` for all popups (optional, but recommended for screen readers and iOS*)
+          $.fn.popup.defaults.pagecontainer = '#page'
+        });
+      
+    $('#popup1').popup();
+    $('#popup2').popup();
+    $('#popup3').popup();
+    $('#popup4').popup();
+    $('#popup5').popup();
+    $('#popup6').popup();
+    $('#popup7').popup();
+    $('#popup8').popup();
+        
 
         window.sr = ScrollReveal()
         sr.reveal('.left', {
@@ -144,7 +171,7 @@
             distance: 0
         })
 
-
+       
 
         </script>
 </body>
